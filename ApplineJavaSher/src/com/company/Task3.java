@@ -5,8 +5,7 @@ public class Task3 {
         int a = nums[0];
         nums[0]=nums[nums.length-1];
         nums[nums.length-1]= a;
-        int sred = nums.length/2;
-        System.out.println(nums[0] + nums[sred]);
+        System.out.println(nums[0] + nums[nums.length/2]);
     }
 }
 
