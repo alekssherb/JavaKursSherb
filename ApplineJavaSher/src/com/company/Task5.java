@@ -10,21 +10,22 @@ public class Task5 {
         System.out.print("Выберите математическую операцию из представленных '+','-','*','/': ");
         String in = sc.next();
         char oper = in.charAt(0);
-        if (oper == '+') {
-            double result = x + y;
-            System.out.println(result);
-        } else if (oper == '-') {
-            double result = x - y;
-            System.out.println(result);
-        } else if (oper == '*') {
-            double result = x * y;
-            System.out.println(result);
-        } else if (oper == '/') {
-            double result = x / y;
-            System.out.println(result);
-        } else {
-            double result = x % y;
-            System.out.println(result);
+        switch (oper) {
+            case '+':
+                System.out.println(x + y);
+                break;
+            case '-':
+                System.out.println(x - y);
+                break;
+            case '/':
+                System.out.println(x / y);
+                break;
+            case '*':
+                System.out.println(x * y);
+                break;
+            default:
+                System.out.println("Нет такой операции");
+                break;
         }
     }
 }
