@@ -11,7 +11,7 @@ public class Task7 {
         String[] array = new String[size];
         System.out.println("Введите элементы массива через enter: ");
         for (int i = 0; i < array.length; i++) {
-            array[i] = sc.nextLine();
+            array[i] = sc.next();
         }
         for (String elem : array) {
             if (elem.equals(x) || elem.equals(y) || elem.equals(z)) {
