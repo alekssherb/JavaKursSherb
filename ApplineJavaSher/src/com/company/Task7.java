@@ -7,11 +7,11 @@ public class Task7 {
         String z = "30";
         Scanner sc = new Scanner(System.in);
         System.out.println("Введите размер создаваемого массива");
-        int size = sc.nextInt();
+        int size = Integer.parseInt(sc.nextLine());;
         String[] array = new String[size];
         System.out.println("Введите элементы массива через enter: ");
         for (int i = 0; i < array.length; i++) {
-            array[i] = sc.next();
+            array[i] = sc.nextLine();
         }
         for (String elem : array) {
             if (elem.equals(x) || elem.equals(y) || elem.equals(z)) {
