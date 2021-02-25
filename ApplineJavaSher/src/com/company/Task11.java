@@ -4,10 +4,10 @@ public class Task11 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.print("Введите первое число c клавиатуры: ");
-        double a = sc.nextDouble();
+        String a = sc.next();
         System.out.print("Введите второе число с клавиатуры: ");
         int b = sc.nextInt();
-        int converteda = (int)a;
+        double converteda = Double.parseDouble(a);
         if (b > converteda) {
             System.out.println("Большее число: " + b);
             System.out.println("Меньшее число: " + (double) converteda);
