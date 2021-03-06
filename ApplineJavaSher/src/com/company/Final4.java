@@ -8,23 +8,34 @@ public class Final4 {
                 "Для подсказки введи: Подсказка");
         String otvet = "Заархивированный вирус";
         String userotvet;
+        boolean flagotvet = true;
+        boolean flag = false;
         while (count <= 3) {
             System.out.printf("Попытка №%d: ", count);
             userotvet = sc.nextLine();
             if (otvet.equalsIgnoreCase(userotvet)) {
                 System.out.println("Правильно!");
+                flagotvet = false;
                 break;
-            } else if (userotvet.equalsIgnoreCase("Подсказка") && count == 1) {
-                System.out.println("Сжатый вирус");
-            } else if (userotvet.equalsIgnoreCase("Подсказка") && count > 1) {
-                System.out.println("Подсказка уже недоступна");
-            } else if (count < 3){
-                count++;
-                System.out.println("Подумай ещё!");
+            } else if (userotvet.equalsIgnoreCase("подсказка")){
+                if (count == 1) {
+                    flag = true;
+                    System.out.println("Сжатый вирус");
+                } else {
+                    System.out.println("Подсказка уже не доступна");
+                    continue;
+                }
             } else {
-                count++;
-                System.out.println("Обидно, приходи в другой раз ");
+                if (count == 2 && flag) {
+                    break;
+                } else if (count == 1 || count == 2) {
+                    System.out.println("Подумай еще!");
+                }
             }
+            count++;
+        }
+        if (flagotvet){
+            System.out.println("Обидно, приходи в другой раз");
         }
     }
 }
